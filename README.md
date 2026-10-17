@@ -32,7 +32,9 @@ npm run build
 npm start
 ```
 
-On first run, the server will prompt you to authorize the application via a URL. Once authorized, it will save a `token.json` file in the root directory for future use.
+To create `token.json`, run `npm run auth`, open the printed URL and sign in. It saves only a refresh token (no expiry date); access tokens are refreshed automatically.
+
+> **Token expiry:** if the OAuth consent screen in Google Cloud is in **Testing** mode, Google expires refresh tokens after 7 days. Set it to **In production** (Google Auth Platform → Audience → Publish app) *before* running `npm run auth` so the token does not expire.
 
 ## Deployment (Railway)
 

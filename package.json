@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth": "npm run build && node build/get-token.js"
   },
   "keywords": [],
   "author": "",
